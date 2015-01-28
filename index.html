@@ -1,0 +1,150 @@
+<!-- DOCTYPE Declaration: Instruction to the web browser about what version of html and type of document to expect -->
+<!DOCTYPE html>
+
+<!-- html: Tells the browser that this is an HTML document. Represents the root of an HTML document. Is the container for all other HTML elements. Supports HTML Global Attributes.
+Attributes:
+- manifest="URL". Specifies the location of the document's cache manifest.
+- xmlns="http://www.w3.org/1999/xhtml": Predefined URL. Not mandatory. Specifies the xml namespace for a document. -->
+<html>
+
+<!-- Head: a container for all the head elements. Can include a title for the document, scripts, styles, meta information, and more. Supports HTML Global Attributes. -->
+<head>
+
+	<!-- Title: Defines a title in the browser toolbar. Provides a title for the page when it is added to favorites. Displays a title for the page in search-engine results. Supports HTML Global Attributes. -->
+	<title>Cheat Sheet</title>
+  	
+  	<!-- See main.css for default CSS settings and values -->
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+
+</head>
+
+<!-- Body: defines the document's body; contains all the contents of an HTML document, such as text, hyperlinks, images, tables, lists, etc. Supports HTML Global Attributes. -->
+<body>
+  
+	<!-- BASIC HTML -->
+	<h3>Basic HTML</h3>	
+		
+		<!-- Headings: h1 being the most important, h6 the least important. Supports HTML Global Attributes. -->
+		<h1>Most important Heading</h1>
+		<h2>Heading</h2>
+		<h3>Heading</h3>
+		<h4>Heading</h4>
+		<h5>Heading</h5>
+		<h6>Least important Heading</h6>
+
+		<!-- Paragraph. Browsers automatically add some space (margin) before and after each <p> element. Supports HTML Global Attributes. -->
+		<p>Paragraph</p>
+
+		<!-- Break: inserts a single line break in the page. Supports HTML Global Attributes. -->
+		<br>
+		<!-- Thematic break: used to separate content in the page. Supports HTML Global Attributes. -->
+		<hr>
+
+	<!-- FORMATTING -->
+	<h3>Formatting</h3>	
+
+		<!-- Abbreviation: Shortened version of something else. Can give useful information to browsers, translation systems and search-engines. Supports HTML Global Attributes.  -->
+		<p><abbr title="Exempli Gratia">e.g.</abbr></p>
+
+		<!-- Address: Defines the contact information for the author/owner of a document (inside <body>, usually within the <footer>) or an article (inside <article>). Supports HTML Global Attributes. -->
+		<p>
+			<address>
+				Written by Jon Doe.<br>
+				Visit us at:<br>
+				Example.com<br>
+				Box 564, Disneyland<br>
+				USA
+			</address>
+		</p>
+
+		<!-- Bi-directional Isolation: isolates a part of text that might be formatted in a different direction from other text outside it. Useful when embedding user-generated content with an unknown directionality. Supports HTML Global Attributes. -->
+		<p><bdi>Something isolated from text direction values</bdi></p>
+
+		<!-- Bi-directional Override: Used to override the current text direction. Supports HTML Global Attributes.
+		Attributes:
+		- dir="value": Specifies the text direction. Value = ltr (left to right) || rtl (right to left) -->
+		<p><bdo dir="ltr">Something that will be written from left to right</bdo></p>
+		<p><bdo dir="rtl">Something that will be written from right to left</bdo></p>
+
+		<!-- Quote: Specifies a section that is quoted from another source. Supports HTML Global Attributes.
+		Attributes:
+		- cite="URL": Specifies the source URL of the quote. -->
+		<p>
+			Something blockquoted like this:
+			<blockquote cite="http://en.wikipedia.org/wiki/Lorem_ipsum">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum imperdiet sagittis varius.
+			</blockquote>
+		</p>
+		<p>Or quoted like this: <q>Lorem ipsum</q></p> <!-- For short quotations. -->
+
+		<!-- Cite: Defines the title of a work. Supports HTML Global Attributes. -->
+		<p>This is <cite>The Work</cite> by some Author</p>
+		
+		<!-- Delete: Defines text that has been deleted from the document. Supports HTML Global Attributes. -->
+		<p><del>Deleted text</del></p>
+		<!-- Insert: Defines text that has been inserted to the document. Supports HTML Global Attributes. -->
+		<p><ins>Inserted text</ins></p>
+		<!-- Both are used to markup updates and modifications in a document.
+		Attributes:
+		- cite="URL": Specifies a URL to a document that explains the reason of <del>/<ins>
+		- datetime="YYYY-MM-DDThh:mm:ssTZD": Specifies date and time when text was <ins>/<del> -->
+		<p>My favorite color is <del cite="http://www.w3schools.com/tags/tag_del.asp">blue</del> <ins datetime="2015-01-27T21:00:10COT">red</ins>!</p>
+
+		<!-- Defining: Represents the defining instance of a term in HTML. Often the first use of a term in a document. Supports HTML Global Attributes. -->
+		<p><dfn>HTML</dfn> is the standard language for creatying webpages</p>
+
+		<!-- Mark: Defines marked/highlighted text. Supports HTML Global Attributes. -->
+		<p><mark>This part of the text</mark> is highlighted</p>
+
+		<!-- Meter: Defines a scalar measurement within a known range, or a fractional value. AKA Gauge. Should not be used to indicate progress (as in a progress bar). Supports HTML Global Attributes.
+		Attributes:
+		- form="form_id": Specifies one or more forms the <meter> belongs to.
+		- high="number": Specifies the range that is considered to be a high value.
+		- low="number": Specifies the range that is considered to be a low value.
+		- max="number": Specifies the maximum value of the range.
+		- min="number": Specifies the minimum value of the range.
+		- optimum="number": Specifies what value is the optimal value for the gauge.
+		- value="number": Required. Specifies the current value of the gauge. -->
+		<p><meter value="2" min="0" max="10"></meter> 2 out of 10</p>
+		<p>
+			<form action="#" method="get" id="form1">
+				First name: <input type="text" name="fname">
+				<input type="submit" value="Submit">
+			</form><br>
+			<meter form="form1" min="0" low="40" high="80" max="100" value="82"></meter>
+		</p>
+
+		Supports HTML Global Attributes.
+
+		Supports HTML Global Attributes.
+
+		<hr>
+
+		<!-- PHRASE TAGS -->
+		<h3>Phrase tags</h3>	
+			<!-- Emphasize: Renders as emphasized text. Supports HTML Global Attributes. -->
+			<p><em>Something emphasized</em></p>
+
+			<!-- Strong: Defines important text. Supports HTML Global Attributes. -->
+			<p><strong>Strong text</strong></p>
+
+			<!-- Code: Defines a piece of computer code. Supports HTML Global Attributes. -->
+			<p><code>A piece of computer code</code></p>
+
+			<!-- Sample: Defines sample output from a computer program. Supports HTML Global Attributes. -->
+			<p><samp>Sample output from a computer</samp></p>
+
+			<!-- Keyboard: Defines keyboard input. Supports HTML Global Attributes. -->
+			<p><kbd>Keyboard input</kbd></p>
+
+			<!-- Variable: Defines a variable. Supports HTML Global Attributes. -->
+			<p><var>Defined variable</var></p>
+
+			<!-- Bold: Specifies bold text. Should be used as a LAST resort when no other tag is more appropriate. Supports HTML Global Attributes. -->
+			<p><b>This is bold text</b></p>
+
+			<!-- Italic: Specifies italic text. Should be used as a LAST resort when no other tag is more appropriate. Supports HTML Global Attributes. -->
+			<p><i>This is italic text</i></p>
+
+</body>
+</html>

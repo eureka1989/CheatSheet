@@ -1,0 +1,36 @@
+/*Global Attributes Styling*/
+table, th, td {
+	border: 1px solid black;
+	
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+	height: 20px;
+	font-weight: bold;
+	text-align: center;
+	padding: 3px;
+}
+td {
+	padding: 2px;
+}
+.hidden {
+	display: none;
+
+}
+.attName {
+	color: darkgreen;
+	font-weight: bold;
+}
+.showSyntax {
+	text-align: center;
+	font-style: italic;
+}
+.syntax-hidden {
+	display: none;
+}
+.syntax-display {
+	width: auto;
+}
