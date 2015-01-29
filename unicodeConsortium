@@ -1,0 +1,53 @@
+The Unicode Consortium
+The Unicode Consortium develops the Unicode Standard. Their goal is to replace the existing character sets with its standard Unicode Transformation Format (UTF).
+
+The Unicode Standard has become a success and is implemented in HTML, XML, Java, JavaScript, E-mail, ASP, PHP, etc. The Unicode standard is also supported in many operating systems and all modern browsers.
+
+The Unicode Consortium cooperates with the leading standards development organizations, like ISO, W3C, and ECMA.
+
+The Unicode Character Sets
+Unicode can be implemented by different character sets. The most commonly used encodings are UTF-8 and UTF-16:
+
+Character-set	Description
+UTF-8	A character in UTF8 can be from 1 to 4 bytes long. UTF-8 can represent any character in the Unicode standard. UTF-8 is backwards compatible with ASCII. UTF-8 is the preferred encoding for e-mail and web pages
+UTF-16	16-bit Unicode Transformation Format is a variable-length character encoding for Unicode, capable of encoding the entire Unicode repertoire. UTF-16 is used in major operating systems and environments, like Microsoft Windows, Java and .NET.
+Tip: The first 128 characters of Unicode (which correspond one-to-one with ASCII) are encoded using a single octet with the same binary value as ASCII, making valid ASCII text valid UTF-8-encoded Unicode as well.
+
+Note	 HTML 4 supports UTF-8. HTML 5 supports both UTF-8 and UTF-16!
+The HTML5 Standard: Unicode UTF-8
+Because the character sets in ISO-8859 was limited in size, and not compatible in multilingual environments, the Unicode Consortium developed the Unicode Standard.
+
+The Unicode Standard covers (almost) all the characters, punctuations, and symbols in the world.
+
+Unicode enables processing, storage, and transport of text independent of platform and language.
+
+The default character encoding in HTML-5 is UTF-8.
+
+If an HTML5 web page uses a different character set than UTF-8, it should be specified in the <meta> tag like:
+
+Example
+
+<meta charset="ISO-8859-1">
+HTML5 UTF-8 Character Codes
+Below is a list of some of the UTF-8 character codes supported by HTML5:
+
+Character codes						Decimal		Hexadecimal
+C0 Controls and Basic Latin			0-127		0000-007F
+C1 Controls and Latin-1 Supplement	128-255		0080-00FF
+Latin Extended-A					256-383		0100-017F
+Latin Extended-B					384-591		0180-024F
+Spacing Modifiers					688-767		02B0-02FF
+Diacritical Marks					768-879		0300-036F
+Greek and Coptic					880-1023	0370-03FF
+Cyrillic Basic						1024-1279	0400-04FF
+Cyrillic Supplement					1280-1327	0500-052F
+General Punctuation					8192-8303	2000-206F
+Currency Symbols					8352-8399	20A0-20CF
+Letterlike Symbols					8448-8527	2100-214F
+Arrows								8592-8703	2190-21FF
+Mathematical Operators				8704-8959	2200-22FF
+Box Drawings						9472-9599	2500-257F
+Block Elements						9600-9631	2580-259F
+Geometric Shapes					9632-9727	25A0-25FF
+Miscellaneous Symbols				9728-9983	2600-26FF
+Dingbats							9984-10175	2700-27BF

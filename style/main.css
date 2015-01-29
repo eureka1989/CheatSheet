@@ -151,7 +151,42 @@ The default values with which following elements will be shown by browsers*/
 	mark {
     	background-color: yellow;
     	color: black;
+	}
+
+	pre {
+		display: block;
+		font-family: monospace;
+		white-space: pre;
+		margin: 1em 0;
 	}	
+
+	rt {
+    	line-height: normal;
+	}
+
+	s { 
+    	text-decoration: line-through;
+	}
+
+	small { 
+	    font-size: smaller;
+	}
+
+	sub { 
+	    vertical-align: sub;
+	    font-size: smaller;
+	}
+
+	sup { 
+	    vertical-align: super;
+	    font-size: smaller;
+	}
+
+	u {
+	    text-decoration: underline;
+	}
+
+
 
 	/*PHRASE TAGS*/
 
@@ -187,3 +222,15 @@ The default values with which following elements will be shown by browsers*/
 			font-style: italic;
 		}
 
+/*FORMS AND INPUT*/
+
+	form {
+	    display: block;
+	    margin-top: 0em;
+	}
+
+	/*FORM ELEMENTS*/
+	
+* {
+	color: #;
+}
