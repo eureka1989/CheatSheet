@@ -211,7 +211,13 @@ Attributes:
 	- <label>
 	Attributes:
 	- acceptcharset="character_set": specifies the character encodings that are to be used for the form submission. UTF-8 is HTML5's default.
-	- action="URL": 
+	- action="URL": specifies where to send the form-data when a form is submitted.
+	- autocomplete="on|off": specifies whether or not an input field should have autocomplete enabled.
+	- enctype="value": specifies how the form-data should be encoded when submitting it to the server (only for method="post").
+	- method="get|post": defines the HTTP method for sending data to the action URL (for type="submit" and type="image").
+	- name="text": specifies the name of a form.
+	- novalidate: specifies that the form should not be validated when submitted.
+	- target="_blank|_self|_parent|_top|framename": specifies where to display the response that is received after submitting the form (for type="submit" and type="image").
 	 -->
 	<form action="demo_form.asp" method="get">
 	  	First name: <input type="text" name="fname"><br>
@@ -222,9 +228,91 @@ Attributes:
 		<!-- FORM ELEMENTS -->
 		<p>Form Elements</p>
 
-		<!-- Input: Specifies an input field where the user can enter data. Used within a <form> element to declare input controls that allow users to input data. Empty, contains only attributes. Use with <label> to define labels for input elements. -->
-		<input type="text">
+		<!-- Input: Specifies an input field where the user can enter data. Used within a <form> element to declare input controls that allow users to input data. Empty, contains only attributes. Use with <label> to define labels for input elements.
+		Attributes:
+		- accept="file_extension|audio/*|video/*|image/*|media_type": specifies the types of files that the server accepts (that can be submitted through a file upload). Can only be used with type="file".
+		- alt="text": provides an alternate text for the user. Can only be used with type="image".
+		- autocomplete="on|off": specifies whether or not an input field should have autocomplete enabled.
+		- autofocus: boolean attribute, specifies that an input should automatically get focus on page load.
+		- checked: boolean attribute, specifies that an input element should be preselected. Can only be used with type="checkbox|radio".
+		- disabled: boolean attribute, specifies that an input element should be disabled.
+		- form="form_id": specifies the form element the <input> element belongs to. The value of this attribute must be the id attribute of a <form> element in the same document.
+		- formaction="URL": specifies the URL of the file that will process the input control when the form is submitted (for type="submit" and type="image").
+		- formenctype="value": specifies how the form-data should be encoded when submitting it to the server (only for forms with method="post", for type="submit" and type="image").
+		- formmethod="get|post": defines the HTTP method for sending data to the action URL (for type="submit" and type="image")
+		- formnovalidate: specifies where to display the response that is received after submitting the form (for type="submit" and type="image").
+		- formtarget="_blank|_self|_parent|_top|framename": specifies where to display the response that is received after submitting the form (for type="submit" and type="image").
+		- height="pixels": specifies the height of an <input> element (only for type="image")
+		- width="pixels": specifies the width of an <input> element (only for type="image").
+		- list="datalist_id": refers to a <datalist> element that contains pre-defined options for an <input> element.
+		- max|min="number|date": specifies the maximum|minimum value for an <input> element.
+		- maxlength="number": specifies the maximum number of characters allowed.
+		- multiple: specifies that a user can enter more than one value (type="mail" and type="file").
+		- name="text": specifies the name of an <input> element so it can be referenced by javascript.
+		- pattern="regexp": specifies a regular expression that an <input> element's value is checked against.
+		- placeholder="text": specifies a short hint that describes the expected value of an <input> element.
+		- readonly: specifies that an input field is read-only.
+		- required: specifies that an input field must be filled out before submitting the form.
+		- size="number": specifies the width, in characters, of an <input> element. Default is 20.
+		- src="URL": specifies the URL of the image to use as a submit button (only for type="image").
+		- step="number": specifies the legal number intervals for an input field. Default is 1.
+		- value="text": specifies the value of an <input> element.
+		- type="value": specifies the type <input> element to display. Possible values: button, checkbox, color, date, datetime, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week. -->
+		<p>Input: <input type="email" required placeholder="ejemplo@ejemplo.com" name="user-email" size="40"></p>
+		<p>Input button: <input type="button" value="Hi!"></p>
+		<p>Input submit: <input type="submit" value="Fuck u!"></p>
 
+		<!-- Text area: defines a multi-line text input control. Can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier). The size of a text area can be specified by the cols and rows attributes, or even better; through CSS' height and width properties.
+		Attributes:
+		- autofocus: specifies that a text area should automatically get focus when the page loads.
+		- cols="number": specifies the visible width of a text area.
+		- rows="number": specifies the visible number of lines in a text area.
+		- disabled: specifies that a text area should be disabled.
+		- form="form_id": specifies one or more forms the text area belongs to.
+		- maxlength="number": specifies the maximum number of characters allowed in the text area.
+		- name="text": specifies a name for a text area.
+		- placeholder="text": specifies a short hint that describes the expected value of a text area.
+		- readonly: specifies that an input field is read-only.
+		- required: specifies that an input field must be filled out before submitting the form.
+		- wrap="hard|soft": specifies how the text in a text area is to be wrapped when submitted in a form. -->
+		<p>Textarea: <textarea rows="2" cols="40" placeholder="Write here" maxlength="200"></textarea></p>
+		
+		<!-- Button: defines a clickable button. You can put content, like text or images. This is the difference between this element and buttons created with the <input> element.
+		Attributes:
+		- autofocus: specifies that a text area should automatically get focus when the page loads. 
+		- disabled: specifies that a text area should be disabled.
+		- form="form_id": specifies one or more forms the text area belongs to.
+		- formaction="URL": specifies the URL of the file that will process the input control when the form is submitted (for type="submit" and type="image").
+		- formenctype="value": specifies how the form-data should be encoded when submitting it to the server (only for forms with method="post", for type="submit" and type="image").
+		- formmethod="get|post": defines the HTTP method for sending data to the action URL (for type="submit" and type="image")
+		- formnovalidate: specifies where to display the response that is received after submitting the form (for type="submit" and type="image").
+		- formtarget="_blank|_self|_parent|_top|framename": specifies where to display the response that is received after submitting the form (for type="submit" and type="image").
+		- name="text": specifies a name for a text area.
+		- type="button|reset|submit".
+		- value="text": specifies an initial value for the button. -->
+		<p>Buttons: 
+			<button type="button" value="wat">Wat?</button>
+			<button type="submit" value="Submit">Submit</button>
+			<button type="reset" value="Reset" input>Reset</button>
+		</p>		
+
+		<!-- Select: is used to create a drop-down list. The <option> tags inside the <select> element define the available options in the list.
+		Attributes:
+		- autofocus: specifies that a text area should automatically get focus when the page loads. 
+		- disabled: specifies that a text area should be disabled.
+		- form="form_id": specifies one or more forms the text area belongs to.
+		- multiple: specifies that a user can enter more than one value (type="mail" and type="file").
+		- required: specifies that an input field must be filled out before submitting the form.
+		- name="text": specifies a name for a text area.
+		- size="number": defines the number of visible options in a drop-down list. -->
+		<p>Select (dropdown): 
+			<select>
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</select>
+		</p>
 
 </body>
 </html>
