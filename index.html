@@ -24,7 +24,7 @@ Attributes:
 <body>
   
 	<!-- BASIC HTML -->
-	<h3>Basic HTML</h3>	
+	<h3 class="title">Basic HTML</h3>	
 		
 		<!-- Headings: h1 being the most important, h6 the least important. -->
 		<h1>Most important Heading</h1>
@@ -43,7 +43,7 @@ Attributes:
 		<hr>
 
 	<!-- FORMATTING -->
-	<h3>Formatting</h3>	
+	<h3 class="title">Formatting</h3>	
 
 		<!-- Abbreviation: Shortened version of something else. Can give useful information to browsers, translation systems and search-engines.  -->
 		<p><abbr title="Exempli Gratia">e.g.</abbr></p>
@@ -198,35 +198,33 @@ Attributes:
 		<hr>
 
 	<!-- FORMS AND INPUT -->
-	<h3>Forms and Input</h3>
+	<h3 class="title">Forms and Input</h3>
 
-	<!-- Form: used to create an HTML form for user input. Can contain one or more of the following form elements:
-	- <input>
-	- <textarea>
-	- <button>
-	- <select>
-	- <option>
-	- <optgroup>
-	- <fieldset>
-	- <label>
-	Attributes:
-	- acceptcharset="character_set": specifies the character encodings that are to be used for the form submission. UTF-8 is HTML5's default.
-	- action="URL": specifies where to send the form-data when a form is submitted.
-	- autocomplete="on|off": specifies whether or not an input field should have autocomplete enabled.
-	- enctype="value": specifies how the form-data should be encoded when submitting it to the server (only for method="post").
-	- method="get|post": defines the HTTP method for sending data to the action URL (for type="submit" and type="image").
-	- name="text": specifies the name of a form.
-	- novalidate: specifies that the form should not be validated when submitted.
-	- target="_blank|_self|_parent|_top|framename": specifies where to display the response that is received after submitting the form (for type="submit" and type="image").
-	 -->
-	<form action="demo_form.asp" method="get">
-	  	First name: <input type="text" name="fname"><br>
-	  	Last name: <input type="text" name="lname"><br>
-	  	<input type="submit" value="Submit">
-	</form>
-
-		<!-- FORM ELEMENTS -->
-		<p>Form Elements</p>
+		<!-- Form: used to create an HTML form for user input. Can contain one or more of the following form elements:
+		- <input>
+		- <textarea>
+		- <button>
+		- <select>
+		- <option>
+		- <optgroup>
+		- <fieldset>
+		- <label>
+		Attributes:
+		- acceptcharset="character_set": specifies the character encodings that are to be used for the form submission. UTF-8 is HTML5's default.
+		- action="URL": specifies where to send the form-data when a form is submitted.
+		- autocomplete="on|off": specifies whether or not an input field should have autocomplete enabled.
+		- enctype="value": specifies how the form-data should be encoded when submitting it to the server (only for method="post").
+		- method="get|post": defines the HTTP method for sending data to the action URL (for type="submit" and type="image").
+		- name="text": specifies the name of a form.
+		- novalidate: specifies that the form should not be validated when submitted.
+		- target="_blank|_self|_parent|_top|framename": specifies where to display the response that is received after submitting the form (for type="submit" and type="image"). -->
+		<p>Form: 
+			<form action="demo_form.asp" method="get">
+		  		First name: <input type="text" name="fname"><br>
+		  		Last name: <input type="text" name="lname"><br>
+		  		<input type="submit" value="Submit">
+			</form>
+		</p>
 
 		<!-- Input: Specifies an input field where the user can enter data. Used within a <form> element to declare input controls that allow users to input data. Empty, contains only attributes. Use with <label> to define labels for input elements.
 		Attributes:
@@ -259,8 +257,19 @@ Attributes:
 		- value="text": specifies the value of an <input> element.
 		- type="value": specifies the type <input> element to display. Possible values: button, checkbox, color, date, datetime, datetime-local, email, file, hidden, image, month, number, password, radio, range, reset, search, submit, tel, text, time, url, week. -->
 		<p>Input: <input type="email" required placeholder="ejemplo@ejemplo.com" name="user-email" size="40"></p>
-		<p>Input button: <input type="button" value="Hi!"></p>
-		<p>Input submit: <input type="submit" value="Fuck u!"></p>
+		<p>Input button: <input type="button" value="Button"></p>
+		<p>Input submit: <input type="submit" value="Submit"></p>
+
+		<!-- Label: defines a label for an <input> element. Does not render as anything special for the user. However, it provides a usability improvement for mouse users, because if the user clicks on the text within the <label> element, it toggles the control. The for attribute of the <label> tag should be equal to the id attribute of the related element to bind them together.
+		Attributes:
+		- for="element_id": specifies which form element a label is bound to.
+		- form="form_id": specifies one or more forms the label belongs to. -->
+		<p>Input w/ label:
+			<label for="male">Male</label>
+			<input type="radio" name="sex" id="male" value="male"><br>
+			<label for="female">Female</label>
+			<input type="radio" name="sex" id="female" value="female"><br>
+		</p>
 
 		<!-- Text area: defines a multi-line text input control. Can hold an unlimited number of characters, and the text renders in a fixed-width font (usually Courier). The size of a text area can be specified by the cols and rows attributes, or even better; through CSS' height and width properties.
 		Attributes:
@@ -272,7 +281,7 @@ Attributes:
 		- maxlength="number": specifies the maximum number of characters allowed in the text area.
 		- name="text": specifies a name for a text area.
 		- placeholder="text": specifies a short hint that describes the expected value of a text area.
-		- readonly: specifies that an input field is read-only.
+		- readonly: specifies that an in put field is read-only.
 		- required: specifies that an input field must be filled out before submitting the form.
 		- wrap="hard|soft": specifies how the text in a text area is to be wrapped when submitted in a form. -->
 		<p>Textarea: <textarea rows="2" cols="40" placeholder="Write here" maxlength="200"></textarea></p>
@@ -305,14 +314,235 @@ Attributes:
 		- required: specifies that an input field must be filled out before submitting the form.
 		- name="text": specifies a name for a text area.
 		- size="number": defines the number of visible options in a drop-down list. -->
-		<p>Select (dropdown): 
+		<!-- Option: defines an option in a select list. Go inside a <select> or <datalist> element. Can group related options with the <optgroup> tag.
+		Attributes:
+		- disabled: specifies that a text area should be disabled.
+		- label="text": specifies a shorter label for an option.
+		- selected: specifies that an option should be pre-selected when the page loads.
+		- value="text": specifies the value to be sent to a server. -->
+		<p>Select (dropdown) w/ Options: 
 			<select>
-				<option value="volvo">Volvo</option>
+				<option value="volvo" label="Volv.">Volvo</option>
 				<option value="saab">Saab</option>
-				<option value="mercedes">Mercedes</option>
+				<option value="mercedes" selected>Mercedes</option>
 				<option value="audi">Audi</option>
 			</select>
 		</p>
+
+		<!-- Group related options: used to group related options in a drop-down list. If you have a long list of options, groups of related options are easier to handle for a user.
+		Attributes:
+		- disabled: specifies that a text area should be disabled.
+		- label="text": specifies a shorter label for an option. -->
+		<p>Group related options: 
+			<select>
+			  	<optgroup label="Swedish Cars">
+				    <option value="volvo">Volvo</option>
+				    <option value="saab">Saab</option>
+			  	</optgroup>
+			  	<optgroup label="German Cars">
+				    <option value="mercedes">Mercedes</option>
+				    <option value="audi">Audi</option>
+			  	</optgroup>
+			</select>
+		</p>
+
+		<!-- Fieldset: used to group related elements in a form. Draws a box around the related elements.
+		Attributes:
+		- disabled: specifies that a text area should be disabled.
+		- form="form_id": specifies one or more forms the text area belongs to.
+		- name="text": specifies a name for the fieldset. -->
+		<p>Fieldset: 
+			<form>
+			  	<fieldset>
+			    	<legend>Personalia (Legend):</legend>
+			   		Name: <input type="text"><br>
+			    	Email: <input type="text"><br>
+			    	Date of birth: <input type="text">
+			  	</fieldset>
+			</form>
+		</p>
+		
+		<!-- Datalist: specifies a list of pre-defined options for an <input> element. Used to provide an "autocomplete" feature on <input> elements. Users will see a drop-down list of pre-defined options as they input data. Use the <input> element's list attribute to bind it together with a <datalist> element. -->
+		<p>Datalist:
+			<input list="browsers">
+			<datalist id="browsers">
+				<option value="Internet Explorer">
+				<option value="Firefox">
+				<option value="Chrome">
+				<option value="Opera">
+				<option value="Safari">
+			</datalist>
+		</p>
+
+		<!-- Keygen: specifies a key-pair generator field used for forms. When the form is submitted, the private key is stored locally, and the public key is sent to the server.
+		Attributes:
+		- autofocus: specifies that a text area should automatically get focus when the page loads. 
+		- challenge: specifies that the value of the <keygen> element should be challenged when submitted.
+		- disabled: specifies that a text area should be disabled.
+		- form="form_id": specifies one or more forms the <keygen> element belongs to.
+		- keytype="rsa|dsa|ec": specifies the security algorithm of the key.
+		- name="text": defines a name for the <keygen> element. -->
+		<p>Keygen:
+			<form action="demo_keygen.asp" method="get">
+			  	Username: <input type="text" name="usr_name">
+			  	Encryption: <keygen name="security">
+			  	<input type="submit">
+			</form>
+		</p>
+
+		<!-- Output: represents the result of a calculation (like one performed by a script).
+		Attribute:
+		- for="element_id": specifies the relationship between the result of the calculation, and the elements used in the calculation.
+		- form="form_id": specifies one or more forms the output element belongs to.
+		- name="text": specifies a name for the output element. -->
+		<p>Output: 
+			<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+				0 <input type="range" id="a" value="50"> 100 
+				+ <input type="number" id="b" value="50">
+				= <output name="x" for="a b"></output>
+			</form>
+		</p>
+
+	<!-- IMAGES -->
+	<h3 class="title">Images</h3>
+
+		<!-- Image: defines an image in an HTML page. Images are not technically inserted into an HTML page, images are linked to HTML pages. Creates a holding space for the referenced image.
+		Attributes:
+		- alt="text": specifies an alternate text for an image.
+		- crossorigin="anonymous|use-credentials": allow images from third-party sites that allow cross-origin access to be used with canvas.
+		- height="pixels": specifies the height of an image.
+		- width="pixels": specifies the width of an image
+		- ismap: specifies an image as a server-side image-map.
+		- src="URL": specifies the URL of an image.
+		- usemap="#mapname": specifies an image as a client-side image-map -->
+		<p>Image: <img src="images/infinite.gif" alt="Smiley face" height="62" width="84"></p>
+
+		<!-- Image map: used to define a client-side image-map. An image-map is an image with clickable areas. The required name attribute of the <map> element is associated with the <img>'s usemap attribute and creates a relationship between the image and the map. The <map> element contains a number of <area> elements, that defines the clickable areas in the image map.
+		Attributes:
+		- name="text": required. Specifies the name of an image-map. -->
+		<!-- Area: defines an area inside an image-map (an image-map is an image with clickable areas). Is always nested inside a <map> tag.
+		Attributes:
+		- alt="text": specifies an alternate text for the area. Required if the 'href' attribute is present.
+		- coords="x1,y1,x2,y2|x,y,radius|x1,y1,...,xn,yn": specifies the coordinates of the area.
+		- download="filename": specifies that the target will be downloaded when a user clicks on the hyperlink.
+		- href="URL": specifies the hyperlink target for the area.
+		- hreflang="language_code": specifies the language of the target URL.
+		- media="(devices)+(operators)+(values)": specifies what media/device the target URL is optimized for.
+		- rel="alternate|author|bookmark|help|license|next|prev|nofollow|noreferrer|prefetch|search|tag": specifies the relationship between the current document and the target URL.
+		- shape="default|rect|circle|poly": specifies the shape of the area.
+		- target="_blank|_parent|_self|_top|filename": specifies where to open the target URL.
+		- type="media_type": specifies the media type of the target URL. -->
+		<p>Image map w/ areas:
+			<img src="images/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+			<map name="planetmap">
+			  	<area shape="rect" coords="0,0,82,126" href="images/sun.htm" alt="Sun">
+			  	<area shape="circle" coords="90,58,3" href="images/mercur.htm" alt="Mercury">
+			  	<area shape="circle" coords="124,58,8" href="images/venus.htm" alt="Venus">
+			</map>
+		</p>
+		
+		<!-- Canvas: used to draw graphics, on the fly, via scripting (usually JavaScript). Is only a container for graphics, you must use a script to actually draw the graphics.
+		Attributes:
+		height="pixels": specifies the height of the canvas.
+		width="pixels": specifies the width of the canvas. -->
+		<p>Canvas:
+			<canvas id="myCanvas" width="200" height="100"></canvas>
+			<script>
+				var canvas = document.getElementById("myCanvas");
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle = "#FF0000";
+				ctx.fillRect(0, 0, 80, 80);
+			</script>
+		</p>
+
+		<!-- Figure: specifies self-contained content, like illustrations, diagrams, photos, code listings, etc. While the content of the <figure> element is related to the main flow, its position is independent of the main flow, and if removed it should not affect the flow of the document. -->
+		<!-- Figure caption: defines a caption for a <figure> element. Can be placed as the first or last child of the <figure> element. -->
+		<p>Figure w/ caption: 
+			<figure>
+				<img src="images/img_pulpit.jpg" alt="The Pulpit Rock" width="304" height="228">
+				<figcaption>Fig1. - A caption for this picture.</figcaption>
+			</figure>
+		</p>
+
+	<!-- AUDIO/VIDEO -->
+	<h3 class="title">Audio and Video</h3>
+
+		<!-- Source: used to specify multiple media resources for media elements, such as <video> and <audio>. Allows you to specify alternative video/audio files which the browser may choose from, based on its media type or codec support.
+		Attributes:
+		- media="media_query": specifies the type of media resource.
+		- src="URL": specifies the URL of the media file.
+		- type="media_type": specifies the media type of the media resource. -->
+		<audio hidden>
+			<source src="movie.ogg" type="video/ogg" media="screen and (min-width:320px)">
+		</audio>
+		
+
+		<!-- Track: specifies text tracks for media elements (<audio> and <video>). This element is used to specify subtitles, caption files or other files containing text, that should be visible when the media is playing.
+		Attributes:
+		- default: specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.
+		- kind="captions|chapters|descriptions|metadata|subtitles": specifies the kind of text track.
+		- label="text": specifies the title of the text track.
+		- src="URL": required. Specifies the URL of the track file
+		- srclang="language_code": specifies the language of the track text data (required if kind="subtitles"). -->
+		<video src="#" hidden>
+			<track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">
+			<track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian">
+		</video>
+
+		<!-- Audio: defines sound, such as music or other audio streams. Currently, there are 3 supported file formats for the <audio> element: MP3, Wav, and Ogg.
+		Attributes:
+		- autoplay: specifies that the audio will start playing as soon as it is ready.
+		- controls: specifies that audio controls should be displayed (such as a play/pause button etc).
+		- loop: specifies that the audio will start over again, every time it is finished.
+		- muted: specifies that the audio output should be muted.
+		- preload="auto|metadata|none": specifies if and how the author thinks the audio should be loaded when the page loads.
+		- src="URL": specifies the URL of the audio file. -->
+		<p>Audio:
+			<audio controls>
+				<source src="audio/horse.ogg" type="audio/ogg">
+				Your browser does not support the audio tag.
+			</audio>
+		</p	>
+
+		<!-- Video: specifies video, such as a movie clip or other video streams. Currently, there are 3 supported video formats for the <video> element: MP4, WebM, and Ogg.
+		Attributes:
+		- autoplay: specifies that the audio will start playing as soon as it is ready.
+		- controls: specifies that audio controls should be displayed (such as a play/pause button etc).
+		- loop: specifies that the audio will start over again, every time it is finished.
+		- muted: specifies that the audio output should be muted.
+		- poster="URL": specifies an image to be shown while the video is downloading, or until the user hits the play button.
+		- preload="auto|metadata|none": specifies if and how the author thinks the audio should be loaded when the page loads.
+		- src="URL": specifies the URL of the audio file.
+		- height="pixels": sets the height of the video file.
+		- width="pixels": sets the width of the video file. -->
+		<p>Video: 
+			<video width="320" height="240" controls poster="video/poster.jpg">
+				  <source src="video/movie.mp4" type="video/ogg">
+				  Your browser does not support the video tag.
+			</video>
+		</p>
+
+	<!-- LINKS -->
+	<h3 class="title">Links</h3>
+
+		<a href=""></a>
+
+		<link rel="stylesheet" href="">
+
+		<nav></nav>
+
+	<!-- OTHER TAGS -->
+	<h3 class="title">Other tags</h3>
+
+		<!-- Inline Frame: specifies an inline frame. Used to embed another document within the current HTML document.
+		Attributes:
+		- name="text": specifies the name of an <iframe>.
+		- sandbox="allow-forms|allow-pointer-lock|allow-popups|allow-same-origin|allow-scripts|allow-top-navigation": enables an extra set of restrictions for the content in an <iframe>.
+		- seamless: specifies that the <iframe> should look like it is a part of the containing document
+		- src="URL": specifies the address of the document to embed in the <iframe>.
+		srcdoc="HTML_code": specifies the HTML content of the page to show in the <iframe>.
+		- width="pixels": specifies the width of an <iframe>. -->
+		<p>Inline Frame: <iframe src="https://www.google.com.co" width="50" sandbox="allow-forms allow-scripts"></iframe></p>
 
 </body>
 </html>
