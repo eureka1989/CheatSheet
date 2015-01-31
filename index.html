@@ -14,9 +14,23 @@ Attributes:
 
 	<!-- Title: Defines a title in the browser toolbar. Provides a title for the page when it is added to favorites. Displays a title for the page in search-engine results. -->
 	<title>Cheat Sheet</title>
+
+	<!-- Metadata: is data (information) about data. The <meta> tag provides metadata about the HTML document. Metadata will not be displayed on the page, but will be machine parsable. Meta elements are typically used to specify page description, keywords, author of the document, last modified, and other metadata. The metadata can be used by browsers (how to display content or reload page), search engines (keywords), or other web services.
+	Attributes:
+	- charset="character_set": specifies the character encoding for the HTML document.
+	- content="text": gives the value associated with the http-equiv or name attribute.
+	- http-equiv="content-type|default-style|refresh": provides an HTTP header for the information/value of the content attribute.
+	- name="application-name|author|description|generator|keywords": specifies a name for the metadata. -->
+	<meta charset="UTF-8">
+	<meta name="description" content="Free Web tutorials">
+	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+	<meta name="author" content="Hege Refsnes">
   	
   	<!-- See main.css for default CSS settings and values -->
 	<link rel="stylesheet" type="text/css" href="style/main.css">
+	
+	<!-- Favicon -->
+	<link rel="icon" href="images/icon.png" type="image/png">
 
 </head>
 
@@ -525,11 +539,309 @@ Attributes:
 	<!-- LINKS -->
 	<h3 class="title">Links</h3>
 
-		<a href=""></a>
+		<!-- A hiperlink: defines a hyperlink, which is used to link from one page to another. 
+		Attributes:
+		- download="filename": specifies that the target will be downloaded when a user clicks on the hyperlink.
+		- href="URL": specifies the URL of the page the link goes to.
+		- hreflang="language_code": specifies the language of the linked document.
+		- media="media_query": specifies what media/device the linked document is optimized for.
+		- id="section_id": specifies the name of an anchor.
+		- rel="alternate|author|bookmark|help|license|next|prev|nofollow|noreferrer|prefetch|search|tag": specifies the relationship between the current document and the target URL.
+		- target="_blank|_parent|_self|_top|filename": specifies where to open the target URL. -->
+		<p><a href="http://www.w3schools.com/tags/tag_a.asp">HTML link Tag</a></p>
 
-		<link rel="stylesheet" href="">
+		<!-- Link: defines a link between a document and an external resource. The <link> tag is used to link to external style sheets.
+		Attributes:
+		- crossorigin="anonymous|use-credentials": .
+		- href="URL": specifies the URL of the page the link goes to.
+		- hreflang="language_code": specifies the language of the linked document.
+		- media="media_query": specifies what media/device the linked document is optimized for.
+		- rel="alternate|archives|author|bookmark|external|first|help|icon|last|license|next|nofollow|noreferrer|pingback|prefetch|prev|search|sidebar|stylesheet|tag|up": required. Specifies the relationship between the current document and the linked document.
+		- sizes="heightxwidth": specifies the size of the linked resource. Only for rel="icon".
+		- type="media_type": specifies the media type of the linked document. -->
+		<link rel="stylesheet" href="styles/main.css" type="text/css">
+		<link rel="icon" href="images/icon.png" type="image/png">
+		
+		<!-- Navigation: defines a set of navigation links. Notice that NOT all links of a document should be inside a <nav> element. The <nav> element is intended only for major block of navigation links. Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content. -->
+		<p>Navigation 
+			<nav>
+				<a href="#">HTML</a> |
+				<a href="#">CSS</a> |
+				<a href="#">JavaScript</a> |
+				<a href="#">jQuery</a>
+			</nav>
+		</p>
 
-		<nav></nav>
+	<!-- LISTS -->
+	<h3 class="title">Lists</h3>
+
+		<!-- List Item: defines a list item. The <li> tag is used in ordered lists(<ol>), unordered lists (<ul>), and in menu lists (<menu>).
+		Attributes:
+		- value="number": specifies the value of a list item. The following list items will increment from that number (only for <ol> lists). -->
+
+		<!-- Unordered List: defines an unordered (bulleted) list. Use the <ul> tag together with the <li> tag to create unordered lists. -->
+		<p>Unordered List:
+			<ul>
+				<li>Coffee</li>
+				<li>Tea</li>
+				<li>Milk</li>
+			</ul>
+		</p>
+
+		<!-- Ordered List: defines an ordered list. An ordered list can be numerical or alphabetical. Use the <li> tag to define list items.
+		Attributes:
+		- reversed: specifies that the list should be descending (9, 8, 7, ...).
+		- start="number": specifies the start value of an ordered list.
+		- type="1|A|a|I|i": specifies the kind of marker to use in the list. -->
+		<p>Ordered List:
+			<ol reversed type="I" start="8">
+			  <li>Coffee</li>
+			  <li>Tea</li>
+			  <li>Milk</li>
+			</ol>
+		</p>
+
+		<!-- Description List: defines a description list. The <dl> tag is used in conjunction with <dt> (defines terms/names) and <dd> (describes each term/name).
+		Description term: defines a term/name in a <dl>.
+		Description definition: used to describe a <dt> in a <dl>. -->
+		<p>Description List w/ terms and descriptions:
+			<dl>
+				<dt>Coffee</dt>
+				<dd>Black hot drink</dd>
+				<dt>Milk</dt>
+				<dd>White cold drink</dd>
+			</dl>
+		</p>
+
+		<!-- Menu: defines a list/menu of commands. The <menu> tag is used for context menus, toolbars and for listing form controls and commands.
+		Attributes:
+		- label="text": specifies a visible label for the menu.
+		- type="popup|toolbar|context": specifies which type of menu to display. -->
+		<!-- Menu Item: defines a command/menu item that the user can invoke from a popup menu.
+		Attributes:
+		- checked: specifies that the command/menu item should be checked when the page loads. Only for type="radio" or type="checkbox".
+		- default: marks the command/menu item as being a default command.
+		- disabled: specifies that the command/menu item should be disabled.
+		- icon="URL": specifies an icon for the command/menu item.
+		- label="text": required. Specifies the name of the command/menu item, as shown to the user.
+		- radiogroup="groupname": specifies the name of the group of commands that will be toggled when the command/menu item itself is toggled. Only for type="radio".
+		type="checkbox|command|radio": specifies the type of command/menu item. Default is "command". -->
+		<p>Menu:
+			<menu type="context" id="mymenu">
+				<menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+				<menu label="Share on...">
+			    	<menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text='+window.location.href);"></menuitem>
+			    	<menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u='+window.location.href);"></menuitem>
+				</menu>
+				<menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+			</menu>
+		</p>
+
+	<!-- TABLES -->
+	<h3 class="title">Tables</h3>
+
+		<!-- Table: defines an HTML table. An HTML table consists of the <table> element and one or more <tr>, <th>, and <td> elements. 
+		Attributes:
+		- sortable: specifies that the table chould be sortable. -->
+
+		<!-- Caption: defines a table caption. The <caption> tag must be inserted immediately after the <table> tag. -->
+
+		<!-- Table Row: defines a table row. contains one or more <th> or <td> elements. -->
+
+		<!-- Table Head: defines a table header.
+		Attributes:
+		- abbr="text": specifies an abbreviated version of the content.
+		- colspan="number": specifies the number of columns a header cell should span.
+		- headers="header_id": specifies one or more cells a cell is related to.
+		- rowspan="number": specifies the number of rows a header cell should span.
+		- scope="col|colgroup|row|rowgroup": specifies whether a header cell is a header for a column, row, or group of columns or rows.
+		- sorted="reversed number|number reversed": defines the sort firection of a column. -->
+
+		<!-- Table Data: defines a table cell.
+		Attributes:
+		- colspan="number": specifies the number of columns a  cell should span.
+		- headers="header_id": specifies one or more cells a cell is related to.
+		- rowspan="number": specifies the number of rows a  cell should span. -->
+
+		<!-- Table Header: is used to group header content in an HTML table. The <thead> element is used in conjunction with the <tbody> and <tfoot> elements to specify each part of a table (header, body, footer). The <thead> tag must be used in the following context: As a child of a <table> element, after any <caption>, and <colgroup> elements, and before any <tbody>, <tfoot>, and <tr> elements. -->
+
+		<!-- Table Body: is used to group the body content in an HTML table. The <tbody> element is used in conjunction with the <thead> and <tfoot> elements to specify each part of a table (body, header, footer). The <tbody> tag must be used in the following context: As a child of a <table> element, after any <caption>, <colgroup>, and <thead> elements. -->
+
+		<!-- Table Footer: is used to group footer content in an HTML table. The <tfoot> element is used in conjunction with the <thead> and <tbody> elements to specify each part of a table (footer, header, body). The <tfoot> tag must be used in the following context: As a child of a <table> element, after any <caption>, <colgroup>, and <thead> elements and before any <tbody> and <tr> elements.  -->
+
+		<!-- Column: specifies column properties for each column within a <colgroup> element. The <col> tag is useful for applying styles to entire columns, instead of repeating the styles for each cell, for each row.
+		Attributes:
+		- span="number": specifies the number of columns a <col> element should span. -->
+		
+		<!-- Column Group: specifies a group of one or more columns in a table for formatting. Must be a child of a <table> element, after any <caption> elements and before any <thead>, <tbody>, <tfoot>, and <tr> elements.
+		Attributes:
+		- span="number": specifies the number of columns a column group should span. -->
+
+		<p>Table w/ rows, header, body, footer and data
+			<table>
+				<caption>Monthly savings</caption>
+				<colgroup>
+				    <col span="1" style="background-color:red">
+				    <col span="1" style="background-color:yellow">
+				</colgroup>
+				<thead>
+					<tr>
+		    			<th>Month</th>
+		    			<th>Savings</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td>Sum</td>
+						<td>$180</td>
+					</tr>
+				</tfoot>
+		 		<tbody>
+		  			<tr>
+		     			<td>January</td>
+		     			<td>$100</td>
+		  			</tr>
+		  			<tr>
+		     			<td>February</td>
+		     			<td>$80</td>
+		  			</tr>
+	 			</tbody>
+			</table>
+		</p>
+
+	<!-- STYLES AND SEMANTICS -->
+	<h3 class="title">Styles and Semantics</h3>
+
+		<!-- Style: is used to define style information for an HTML document. Inside the <style> element you specify how HTML elements should render in a browser. Each HTML document can contain multiple <style> tags. 
+		Attribute: 
+		- media="mediaQ_query": specifies what media/devide the media resource is optimized for.
+		- scoped: specifies that the styles only apply to this element's parent element and that element's child elements.
+		type="text/css": specifies the media type of the <style> tag. -->
+		<style>
+			something {color:red;}
+			other thing {color:blue;}
+		</style>
+
+		<!-- Division: defines a division or a section in an HTML document. The <div> tag is used to group block-elements to format them with CSS. is very often used together with CSS, to layout a web page. By default, browsers always place a line break before and after the <div> element. However, this can be changed with CSS. -->
+		<div>
+			<p>Division</p>
+		</div>
+
+		<!-- Span Object: is used to group inline-elements in a document. Provides no visual change by itself. Provides a way to add a hook to a part of a text or a part of a document. -->
+		<p>Span object: My mother has <span style="color:blue">blue</span> eyes.</p>
+
+		<!-- Header: represents a container for introductory content or a set of navigational links. Typically contains: one or more heading elements (<h1> - <h6> and <hgroup>), logo or icon, authorship information. You can have several <header> elements in one document. Cannot be placed within a <footer>, <address> or another <header> element. -->
+		<article>
+		  	<header>
+		    	<h1>Most important heading here</h1>
+		    	<h4>Less important heading here</h3>
+		    	<p>Some additional information here</p>
+		  	</header>
+		  	<p>Lorem Ipsum dolor set amet....</p>
+		</article>
+
+		<!-- Header group: is used to group heading elements. Is used to group a set of <h1> to <h6> elements, when a heading has multiple levels (subheadings). -->
+		<hgroup>
+		  	<h1>Welcome to my WWF</h1>
+		  	<h2>For a living planet</h2>
+		</hgroup>
+		<p>The rest of the content...</p>
+
+		<!-- Footer: defines a footer for a document or section. -->
+		<footer>
+		  	<p>Posted by: Hege Refsnes</p>
+		  	<p>Contact information: 
+		  		<a href="mailto:someone@example.com">someone@example.com</a>.
+		  	</p>
+		</footer>
+
+		<!-- Main: specifies the main content of a document. The content inside the <main> element should be unique to the document. It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms. There must not be more than one <main> element in a document. The <main> element must NOT be a descendent of an <article>, <aside>, <footer>, <header>, or <nav> element. -->
+		<main>
+			<h1></h1>
+			<p></p>
+			<article>
+				<h1></h1>
+				<p></p>
+			</article>
+			<article>
+				<h1></h1>
+				<p></p>
+			</article>
+		</main>
+
+		<!-- Section: defines sections in a document, such as chapters, headers, footers, or any other sections of the document. -->
+		<section>
+		  	<h1>WWF</h1>
+		  	<p>The World Wide Fund for Nature (WWF) is....</p>
+		</section>
+
+		<!-- Article: specifies independent, self-contained content. An article should make sense on its own and it should be possible to distribute it independently from the rest of the site. -->
+		<article>
+		  	<h1>Google Chrome</h1>
+		  	<p>Google Chrome is a free, open-source web browser developed by Google, released in 2008.</p>
+		</article>
+
+		<!-- Aside: defines some content aside from the content it is placed in. The aside content should be related to the surrounding content. -->
+		<p>My family and I visited The Epcot center this summer.</p>
+		<aside>
+		  	<h4>Epcot Center</h4>
+		  	<p>The Epcot Center is a theme park in Disney World, Florida.</p>
+		</aside>
+
+		<!-- Details: specifies additional details that the user can view or hide on demand. Can be used to create an interactive widget that the user can open and close. Any sort of content can be put inside the <details> tag.The content of a <details> element should not be visible unless the open attribute is set.
+		Attributes:
+		open: specifies that the details should be visible (open) to the user. -->
+		<!-- Summary: defines a visible heading for the <details> element. The heading can be clicked to view/hide the details. -->
+		<details>
+		  	<summary>Copyright 1999-2014.</summary>
+		  	<p> - by Refsnes Data. All Rights Reserved.</p>
+		  	<p>All content and graphics on this web site are the property of the company Refsnes Data.</p>
+		</details>
+
+		<!-- Dialog:	defines a dialog box or window.	The <dialog> element makes it easy to create popup dialogs and modals on a web page.
+		Attributes:
+		open: specifies that the dialog element is active and that the user can interact with it. -->
+		<p>Something something <dialog open>dialog!</dialog> something </p>
+
+	<!-- PROGRAMMING -->
+	<h3 class="title">Programming</h3>
+
+		<!-- Script: is used to define a client-side script, such as a JavaScript. The <script> element either contains scripting statements, or it points to an external script file through the src attribute. Common uses for JavaScript are image manipulation, form validation, and dynamic changes of content. 
+		Attributes:
+		- async: specifies that the script is executed asynchronously (only for external scripts).
+		- charset: specifies the character encoding used in an external script file. 
+		- defer: specifies that the script is executed when the page has finished parsing (only for external scripts).
+		- src="URL": specifies the URL of an external script file.
+		type="media_type": specifies the media type of the script. -->
+		<script>
+			document.getElementById("demo").innerHTML = "Hello JavaScript!";
+		</script>
+
+		<!-- No Script: defines an alternate content for users that have disabled scripts in their browser or have a browser that doesn't support script. Can be used in both <head> and <body>. When used inside the <head> element: <noscript> must contain <link>, <style>, and <meta> elements. The content inside the <noscript> element will be displayed if scripts are not supported, or are disabled in the user's browser. -->
+		<noscript>Your browser does not support JavaScript!</noscript>
+
+		<!-- Embed: defines a container for an external application or interactive content (a plug-in).
+		Attributes:
+		- height/width="pixels": specifies height/width of the embedded content.
+		src="URL": specifies the address of the external file to embed.
+		- type="media_type": specifies the media type of the embedded content. -->
+		<embed src="" type="">
+		
+		<!-- Object: defines an embedded object within an HTML document. Use this element to embed multimedia (like audio, video, Java applets, ActiveX, PDF, and Flash) in your web pages. You can also use the <object> tag to embed another webpage into your HTML document. You can use the <param> tag to pass parameters to plugins that have been embedded with the <object> tag.
+		Attributes: 
+		- form="form_id": specifies one or more forms the object belongs to.
+		- height/width="pixels": specifies height/width of the embedded content.
+		- name="text": specifies a name for the object.
+		- type="media_type": specifies the media type of data specified in the data attribute.
+		- usemap="#mapname": specifies the name of a client-side image map to be used with the object.  -->
+
+		<!-- Parameter: used to define parameters for plugins embedded with an <object> element. Tip: HTML 5 also includes two new elements for playing audio or video: The <audio> and <video> tags.
+		Attribute:
+		- name="text": specifies the name of a parameter.
+		- value="value": specifies the value of the parameter. -->
+		<object width="400" height="400" data="helloworld.swf">
+			<param name="autoplay" value="true">
+		</object>
 
 	<!-- OTHER TAGS -->
 	<h3 class="title">Other tags</h3>
