@@ -856,5 +856,82 @@ Attributes:
 		- width="pixels": specifies the width of an <iframe>. -->
 		<p>Inline Frame: <iframe src="https://www.google.com.co" width="50" sandbox="allow-forms allow-scripts"></iframe></p>
 
+	<!-- GLOBAL ATTRIBUTES -->
+	<h3 class="title">Global attributes</h3>
+	
+	<!-- Acceskey: specifies a shortcut key to activate/focus an element (Usually [Alt] + accesskey).
+	Syntax: <element accesskey="character">
+	Values:
+	- character: specifies the shortcut key to activate/focus the element. -->
+	<p>Acces key: H, <a href="http://www.w3schools.com/html5" accesskey="h">HTML5</a><br></p>
+
+	<!-- Class: specifies one or more classnames for an element. The class attribute is mostly used to point to a class in a style sheet. However, it can also be used by a JavaScript (via the HTML DOM) to make changes to HTML elements with a specified class.
+	Syntax: <element class="classname">
+	Values:
+	- classname: specifies one or more class names for an element. To specify multiple classes, separate the class names with a space, e.g. <span class="left important">. This allows you to combine several CSS classes for one HTML element. Must begin with a letter A-Z or a-z, followed by letters (A-Za-z), digits (0-9), hyphens ("-"), and underscores ("_"). -->
+	<p class="title">This is a paragraph with a class "title"</p>
+
+	<!-- Editable content: specifies whether the content of an element is editable or not. When it is not set on an element, the element will inherit it from its parent.
+	Syntax: <element contenteditable="true|false"> -->
+	<p contenteditable="true">This is an editable paragraph.</p>
+
+	<!-- Context menu: specifies a context menu for an element. The context menu appears when a user right-clicks on the element. The value of the contextmenu attribute is the id of the <menu> element to open.
+	Syntax: <element contextmenu="menu_id">
+	Values:
+	- menu_id: the id of the <menu> element to open. -->
+	<div contextmenu="mymenu">
+		<menu type="context" id="mymenu">
+			<menuitem label="Refresh"></menuitem>
+		  	<menuitem label="Twitter"></menuitem>
+		</menu>
+	</div>
+
+	<!-- Data type: used to store custom data private to the page or application. Gives us the ability to embed custom data attributes on all HTML elements. The stored (custom) data can then be used in the page's JavaScript to create a more engaging user experience (without any Ajax calls or server-side database queries).
+	Syntax: <element data-*="somevalue">
+	Values:
+	- somevalue: specifies the vaaue of the attibute (as a string). -->
+	<p>An unorder list with of list items w/ data type attribute:
+		<ul>
+		    <li data-animal-type="bird">Owl</li>
+		    <li data-animal-type="fish">Salmon</li> 
+		</ul>
+	</p>
+
+	<!-- Draggable: specifies whether an element is draggable or not. Links and images are draggable by default.
+	Syntax: <element draggable="true|false|auto"> -->
+	<p draggable="true">This is a draggable paragraph.</p>
+
+	<!-- Hidden: is a boolean attribute. When present, it specifies that an element is not yet, or is no longer, relevant. Browsers should not display elements that have the hidden attribute specified. The hidden attribute can also be used to keep a user from seeing an element until some other condition has been met (like selecting a checkbox, etc.). Then, a JavaScript could remove the hidden attribute, and make the element visible.
+	Syntax: <element hidden> -->
+	<p hidden>This paragraph should be hidden.</p>
+
+	<!-- ID: specifies a unique id for an HTML element (the value must be unique within the HTML document). The id attribute is most used to point to a style in a style sheet, and by JavaScript (via the HTML DOM) to manipulate the element with the specific id.
+	Syntax: <element id="id">
+	Values:
+	- id: specifies a unique id for the element. Must contain at least one character. Must not contain any space characters. -->	
+	<p id="myHeader">This is a paragraph with an id "myHeader", the only element with this id.</p>
+
+	<!-- Language: specifies the language of the element's content.
+	Syntax: <element lang="language_code"> -->
+	<p lang="fr">Ceci est un paragraphe.</p>
+
+	<!-- Spell check: specifies whether the element is to have its spelling and grammar checked or not. Text values in input elements (not password), text in <textarea> elements, text in editable elements can be checked.
+	Syntax: <element spellcheck="true|false"> -->
+	<p contenteditable="true" spellcheck="true">This is a paragraph.</p>
+
+	<!-- Style: specifies an inline style for an element. Will override any style set globally, e.g. styles specified in the <style> tag or in an external style sheet.
+	Syntax: <element style="style_definitions">
+	Values: 
+	- style_definitions: one or more CSS properties and values separated by semicolons (e.g. style="color:blue;text-align:center") -->
+	<h1 style="color:blue;text-align:center">This is a header w/ inline style.</h1>
+	<p style="color:green">This is a paragraph w/ inline style.</p>
+
+	Title: specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.
+	Syntax: <element title="text">
+	Values: 
+	- text: a tooltip text for an element
+	<p title="Free Web tutorials">W3Schools.com</p>
+
+
 </body>
 </html>
